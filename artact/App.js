@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Main 화면</Text>
+      <Text>Main 화면 v1.0.1 artact client</Text>
       <Button
         title="카메라로 이동"
         onPress={() => navigation.navigate('Camera')}
