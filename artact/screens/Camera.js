@@ -40,7 +40,12 @@ export default function CameraScreen({ navigation }) {
         });
 
         if (response.ok) {
+          const art_id = await response.text(); // 응답 본문에서 ID 값을 가져옴
           console.log('이미지 업로드 성공');
+          console.log('서버에서 반환한 ART ID:', art_id); // ID 값을 출력
+
+          // 이미지 업로드 성공 시, 다른 화면으로 이동
+          navigation.navigate('WebView', {art_id}); // 'WebViewScreen'은 React Navigation에서 정의한 다른 화면 이름
         } else {
           console.error('이미지 업로드 실패');
         }
