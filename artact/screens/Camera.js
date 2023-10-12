@@ -31,7 +31,7 @@ export default function CameraScreen({ navigation }) {
       });
 
       try {
-        const response = await fetch('http://172.30.1.100:3000/upload', {
+        const response = await fetch('http://101.79.9.58:1103/upload', {
           method: 'POST',
           body: formData,
           headers: {
